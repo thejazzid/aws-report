@@ -18,7 +18,11 @@ class S3Analyzer():
 
         for bucket in buckets:
             acl = bucket.Acl()
-            public, grants = self.verify_acl(acl)
+
+            try:
+                public, grants = self.verify_acl(acl)
+            except:
+                continue
 
             if public:
                 print("{0}[WARNING]{1} Bucket {2} is public!".format(bcolors.FAIL, bcolors.ENDC, bucket.name))

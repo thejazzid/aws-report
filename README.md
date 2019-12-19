@@ -31,7 +31,7 @@
 
 ### Install requirements
 ```
-pip3 install -U -r requirements.txt
+pip3 install --user -r requirements.txt
 ```
 
 ### Enviroment variables

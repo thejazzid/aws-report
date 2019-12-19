@@ -25,23 +25,23 @@ def main(s3, iam, sg, elasticip, volumes, ami, owner, igw):
         s3 = S3Analyzer()
         s3.bucket_analyzer()
 
-    elif iam:
+    if iam:
         iam = IamAnalyzer()
         iam.find_max_access_key_age()
 
-    elif sg:
+    if sg:
         sg = SgAnalyzer()
         sg.find_security_groups()
 
-    elif elasticip:
+    if elasticip:
         ip = ElasticIpAnalyzer()
         ip.find_elastic_dissociated()
 
-    elif volumes:
+    if volumes:
         vol = VolumesAnalyzer()
         vol.find_volumes_available()
 
-    elif ami:
+    if ami:
         owners = list()
 
         for own in owner:
@@ -50,7 +50,7 @@ def main(s3, iam, sg, elasticip, volumes, ami, owner, igw):
         ami = AmiAnalyzer(owners)
         ami.find_public_ami()
 
-    elif igw:
+    if igw:
         igw = IgwAnalyzer()
         igw.find_igw_detached()
 

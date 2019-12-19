@@ -3,8 +3,8 @@ import boto3
 from modules.colors import bcolors
 
 class AmiAnalyzer():
-    def __init__(self, owners):
-        self.ec2 = boto3.client('ec2')
+    def __init__(self, owners, region_name):
+        self.ec2 = boto3.client('ec2', region_name=region_name)
         self.owners = owners
 
     def find_public_ami(self):

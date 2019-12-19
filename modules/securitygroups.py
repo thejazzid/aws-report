@@ -2,8 +2,8 @@ import boto3
 from modules.colors import bcolors
 
 class SgAnalyzer():
-    def __init__(self):
-        self.ec2 = boto3.client('ec2')
+    def __init__(self, region_name):
+        self.ec2 = boto3.client('ec2', region_name=region_name)
         self.full_access = "0.0.0.0/0"
 
     def find_security_groups(self):

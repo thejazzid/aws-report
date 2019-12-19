@@ -3,8 +3,8 @@ import boto3
 from modules.colors import bcolors
 
 class ElasticIpAnalyzer():
-    def __init__(self):
-        self.ec2 = boto3.client('ec2')
+    def __init__(self, region_name):
+        self.ec2 = boto3.client('ec2', region_name=region_name)
 
     def find_elastic_dissociated(self):
         elasticips = self.ec2.describe_addresses()

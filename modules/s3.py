@@ -27,6 +27,8 @@ class S3Analyzer():
             if public:
                 print("{0}[WARNING]{1} Bucket {2} is public!".format(bcolors.FAIL, bcolors.ENDC, bucket.name))
 
+        print("\n")
+
     def verify_acl(self, acl):
         dangerous = defaultdict(list)
 

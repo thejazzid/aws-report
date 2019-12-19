@@ -14,3 +14,5 @@ class AmiAnalyzer():
             ami_id = ami['ImageId']
             if ami['Public']:
                 print("{0}[WARNING]{1} AMI {2} is public!".format(bcolors.FAIL, bcolors.ENDC, ami_id))
+
+        print("\n")

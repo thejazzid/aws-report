@@ -19,3 +19,5 @@ class SgAnalyzer():
                 for ip in permission['IpRanges']:
                     if ip['CidrIp'] == self.full_access:
                         print("{0}[WARNING]{1} Security group {2} with inbound rule 0.0.0.0/0 to port {3}".format(bcolors.FAIL, bcolors.ENDC, sg_groupid, to_port))
+
+        print("\n")

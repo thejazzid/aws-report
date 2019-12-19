@@ -12,3 +12,5 @@ class VolumesAnalyzer():
             volume_id = volume['VolumeId']
             if not volume['Attachments']:
                 print("{0}[INFO]{1} EBS Volume {2} available".format(bcolors.WARNING, bcolors.ENDC, volume_id))
+
+        print("\n")

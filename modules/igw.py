@@ -13,3 +13,5 @@ class IgwAnalyzer():
             igw_id = igw['InternetGatewayId']
             if not igw['Attachments']:
                 print("{0}[INFO]{1} Internet Gateway {2} it is detached".format(bcolors.WARNING, bcolors.ENDC, igw_id))
+
+        print("\n")

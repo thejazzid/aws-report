@@ -14,3 +14,5 @@ class ElasticIpAnalyzer():
 
             if 'InstanceId' not in ip:
                 print("{0}[INFO]{1} Elastic IP {2} with public IP {3} is not associated".format(bcolors.WARNING, bcolors.ENDC, allocation_id, public_ip))
+
+        print("\n")

@@ -17,8 +17,6 @@
 
 <hr>
 
-[![asciicast](https://asciinema.org/a/H2kIjGRo4GvvdRXDZ41DoFXRn.svg)](https://asciinema.org/a/H2kIjGRo4GvvdRXDZ41DoFXRn)
-
 ### Features
 
 * Search iam users based on creation date

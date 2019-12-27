@@ -1,10 +1,17 @@
 import boto3
+import sys
 
 from modules.colors import bcolors
 
 class AmiAnalyzer():
     def __init__(self, owners, region_name):
         self.ec2 = boto3.client('ec2', region_name=region_name)
+
+        if not owners:
+            print("Please, inform the owner of the AMI's")
+            print("Example: python3 aws_report.py --ami --owner 15326846665")
+            sys.exit(1)
+
         self.owners = owners
 
     def find_public_ami(self):

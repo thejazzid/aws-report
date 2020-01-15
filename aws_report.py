@@ -7,6 +7,7 @@ from modules.elasticip import ElasticIpAnalyzer
 from modules.volumes import VolumesAnalyzer
 from modules.ami import AmiAnalyzer
 from modules.igw import IgwAnalyzer
+from modules.rds import RdsAnalyzer
 from modules.banner import Banner
 
 @click.command()
@@ -18,9 +19,10 @@ from modules.banner import Banner
 @click.option('--ami', is_flag=True, help="Search AMIs with permission public")
 @click.option('--owner', multiple=True, default='', help="Defines the owner of the resources to be found")
 @click.option('--igw', is_flag=True, help="Search internet gateways detached")
+@click.option('--rds', is_flag=True, help="Search relational databases with access public")
 @click.option('--region', default="us-east-1", help="Defines the region of resources")
 
-def main(s3, iam, sg, elasticip, volumes, ami, owner, igw, region):
+def main(s3, iam, sg, elasticip, volumes, ami, owner, igw, region, rds):
 
     if s3:
         s3 = S3Analyzer()
@@ -54,6 +56,10 @@ def main(s3, iam, sg, elasticip, volumes, ami, owner, igw, region):
     if igw:
         igw = IgwAnalyzer(region)
         igw.find_igw_detached()
+
+    if rds:
+        rds = RdsAnalyzer()
+        rds.find_rds_public()
 
 if __name__=='__main__':
     print(Banner.banner)

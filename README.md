@@ -26,6 +26,7 @@
 * Search volumes available
 * Search AMIs with permission public
 * Search internet gateways detached
+* Search RDS with permission public
 
 ### Install requirements
 ```
@@ -52,6 +53,7 @@ Options:
   --ami          Search AMIs with permission public
   --owner TEXT   Defines the owner of the resources to be found
   --igw          Search internet gateways detached
+  --rds          Search relational databases with access public
   --region TEXT  Defines the region of resources
   --help         Show this message and exit.
 ```

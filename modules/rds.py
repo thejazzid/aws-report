@@ -18,4 +18,3 @@ class RdsAnalyzer():
             if (public):
                 print("{0}[WARNING]{1} RDS {2} with engine {3} is public!"\
                         .format(bcolors.FAIL, bcolors.ENDC, rds_name, engine))
-

@@ -4,7 +4,7 @@
 
   <p align="center">
     <a href="https://twitter.com/gmdutrax">
-      <img src="https://img.shields.io/badge/twitter-@gmdutrax-blue.svg">
+      <img src="https://img.shields.io/badge/twitter-@dtr0x80-blue.svg">
     </a>
     <a href="https://travis-ci.org/gmdutra/aws-report">
       <img src="https://travis-ci.org/gmdutra/aws-report.svg?branch=master">
